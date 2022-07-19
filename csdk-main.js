@@ -2,9 +2,9 @@
 console.log("Loading from JSFiddle")
 //Simulated JSON data for questions, to load in extra info.
 let helpData = {
-	"Q1" : {
-    	title : "About Q1",
-        content : "Here's some info about Q1."
+	"Q3" : {
+    	title : "About Q3",
+        content : "Here's some info about Q3."
     },
     "Q2" : {
     	title : "About Q2",
