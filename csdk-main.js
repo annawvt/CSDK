@@ -31,42 +31,42 @@ function getIfKeyExists(key, dictionary){
 function showHelpModal(title, content){
 	
 
-   		let modal = $("#csdk-modal");
+   		let modal = jQuery("#csdk-modal");
         console.log(title)
         modal.find(".header").empty().append(title);
         modal.find(".content").empty().append(content);
-        $("#csdk-modal").show()
+        jQuery("#csdk-modal").show()
 		
 }
 
 function hideHelpModal(){
-	$("#csdk-modal").hide();
+	jQuery("#csdk-modal").hide();
 }
 
 function findQuestionsOnPage()
 {
 //close if clicking close button
-$("#csdk-modal-close").click(()=>hideHelpModal())
+jQuery("#csdk-modal-close").click(()=>hideHelpModal())
 
 //Close if clicking outside modal frame
-$("#csdk-modal").click(function(e) {
+jQuery("#csdk-modal").click(function(e) {
     e.target == this ? hideHelpModal() : console.log("B");
 })
-	$(".Question").map(
+	jQuery(".Question").map(
     	function mapQuestions(){
-        	let qid = $(this).attr("questionid")
+        	let qid = jQuery(this).attr("questionid")
             let data = getIfKeyExists(qid, helpData)
-            let template = $("#csdk-help-icon").contents()
+            let template = jQuery("#csdk-help-icon").contents()
             
             console.log(data)
             if(data != null){
             	template.attr("title", `Click for help with this question.`)
-            	$(this).find(".QuestionText").prepend(template.clone())
-                $(this).find(".csdk-help-icon").click(()=>showHelpModal(data.title, data.content))
+            	jQuery(this).find(".QuestionText").prepend(template.clone())
+                jQuery(this).find(".csdk-help-icon").click(()=>showHelpModal(data.title, data.content))
                 
             }
             
-    		return $(this).attr("questionid")
+    		return jQuery(this).attr("questionid")
     })
 }
 
