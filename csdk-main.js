@@ -1,5 +1,5 @@
 
-console.log("Loading from GithubCDN")
+console.log("Loading from GithubCDN TESTESATAGDADGDA")
 //Simulated JSON data for questions, to load in extra info.
 let helpData = {
 	"Q3" : {
